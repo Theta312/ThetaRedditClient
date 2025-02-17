@@ -4,6 +4,8 @@ import Index from '../app/page.tsx';
 import { renderWithProviders } from '../app/utils/test-utils.tsx';
 import getFunc from "../util/homeAPI/homeAPI";
 
+
+
 jest.mock('../util/homeAPI/homeAPI');
 
 
