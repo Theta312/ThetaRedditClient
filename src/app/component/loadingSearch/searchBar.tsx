@@ -31,10 +31,10 @@ export default function SearchBar() {
     }
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <input type='text' value={search} onChange={handleChange} placeholder='Search...' />
-                <button type='submit' >Search</button>
+        <div className='searchBar'>
+            <form onSubmit={handleSubmit} >
+                <input className='searchInput' type='text' value={search} onChange={handleChange} placeholder='Search...' />
+                <button className='submitButton'  type='submit' >Search</button>
             </form>
         </div>
     )

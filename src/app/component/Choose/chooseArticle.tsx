@@ -24,10 +24,10 @@ const ChooseArticle:React.FC<MyComponentProps> = ({article}) => {
 
     const id = article.data.id;
     const name = article.data.title;
-    
+  
 
     return (
-        <div key={id} onClick={handleClick} >
+        <div key={id} onClick={handleClick} className='try'>
             <h3>{name}</h3>
         </div>
     )

@@ -1,6 +1,8 @@
 import { StoreProvider } from "./StoreProvider"
 import SearchBar from "./component/loadingSearch/searchBar"
 import Navigation from "./component/Nav/navigation"
+import './global.css'
+
 
 export const metadata = {
   title: 'Next.js',
@@ -16,11 +18,11 @@ export default function RootLayout({
     <StoreProvider>
       <html lang="en">
         <body>
-          <div>
+          <div className='heading' >
             <Navigation />
             <SearchBar />
-          </div>
-          {children}
+          </div>      
+            {children}
         </body>
       </html>
     </StoreProvider>

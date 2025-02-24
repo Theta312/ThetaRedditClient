@@ -11,7 +11,7 @@ export default function Index() {
     const dispatch = useAppDispatch();
     const data = useAppSelector(homeState);
     const loading = useAppSelector(homeLoading);
-    console.log()
+    
     
     useEffect(() => {
         if (data.length > 0) {
@@ -25,7 +25,7 @@ export default function Index() {
 
     if (!loading) {
         return (
-            <div data-testid='home' >
+            <div className='realHome' data-testid='home' >
                 <Home data={data} />
             </div>
         )

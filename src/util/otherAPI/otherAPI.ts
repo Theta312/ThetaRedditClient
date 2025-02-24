@@ -3,7 +3,7 @@ type InterestFuncType = () => Promise<any>;
 type searchFuncType= (word: string) => Promise<any>;
 
 const AMIFunc: AMIFuncType = async() => {
-    const amIUrl = 'https://www.reddit.com/r/AITAH.json';
+    const amIUrl = 'https://www.reddit.com/r/AmItheAsshole.json';
   
     try {
         const response = await fetch(amIUrl);
