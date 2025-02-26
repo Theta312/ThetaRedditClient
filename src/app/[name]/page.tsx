@@ -14,7 +14,7 @@ export default function Article() {
     };
     const article = useAppSelector(articleSelected);
 
-    
+  
     let name: string;
     let texted;
     if (article.data) {
@@ -25,11 +25,11 @@ export default function Article() {
     }
 
     return (
-        <div>
-            <h1>Article:</h1>
-            <h2>{name} </h2>
-            <p>{texted}</p>
+        <div className='article-container'>
             <button type='button' onClick={handleGoBack}>Go Back</button>
+            <h1>Article:</h1>
+            <h2>{name} </h2> 
+            <p>{texted}</p>
         </div>
     )
 }

@@ -21,8 +21,8 @@ export default function RootLayout({
           <div className='heading' >
             <Navigation />
             <SearchBar />
-          </div>      
-            {children}
+          </div>
+          {children} 
         </body>
       </html>
     </StoreProvider>

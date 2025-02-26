@@ -25,7 +25,7 @@ export default function Index() {
 
     if (!loading) {
         return (
-            <div className='realHome' data-testid='home' >
+            <div className='realHome'  data-testid='home' >
                 <Home data={data} />
             </div>
         )

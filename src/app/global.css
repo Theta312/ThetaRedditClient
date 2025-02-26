@@ -6,29 +6,28 @@
 
 /*types*/
 body {
-    height: 1500px;
+    height: 1000px;
     min-width: 100%;
     grid-template: 10% 20% 70% / 100%;
     grid-template-areas: 'nav'
                          'search'
                          'reddit';
     display:grid;
-    border: 2px solid green;
+    
 }
 
-html {
-    background-color: black;
-}
+
 
 /*classes*/
 
 /*navigation*/
 .navigation {
     grid-area: nav;
-    border: 2px solid yellow;
     display: grid;
     grid-template: 100% / 1fr 1fr 1fr;
     justify-items: center;;
+    position: relative;
+    top: 20px;
 }
 
 .button {
@@ -89,7 +88,6 @@ html {
 /*search*/
 .searchBar {
     grid-area: search;
-    border: 2px solid red;
     position: relative;
     top: 50px;
     height: 60px;
@@ -143,27 +141,68 @@ html {
 /*body*/
 .realHome {
     grid-area: reddit;
-    border: 2px dotted black;
     display: flex;
     position: relative;
-    bottom: 240px;
-    height: 1286px;
+    bottom: 100px;
+    height: 800px;
     justify-content: center;
-    
+    background-color: black;
+    z-index:8;
 }
 
 
 
+.article-container {
+    position: relative;
+    bottom: 130px;
+    height: 790px;
+    overflow: scroll;
+}
 
+.article-container h1 {
+    text-align: center;
+    
+}
+
+.article-container h2 {
+    text-align: center;
+}
+
+.article-container p {
+    text-align: center;
+    width: 60%;
+    justify-self: center;
+    font-size: 17px;
+    
+}
+
+.article-container button {
+    border-left: none!important;
+    border-right: none !important;
+    border: 3px solid black;
+    border-radius: 13px;
+    background-color: orangered;
+    height: 37px;
+    width: 60px;
+}
+
+.article-container button:hover{
+    box-shadow: inset -1px -2px 2px 1px black;
+}
+
+ .article-container button:active{
+    position: relative;
+    top: 2px;
+}
 
 .list-container {
-    border: 2px solid blue;
     width: 70%;
     display: grid;
     grid-template-columns: 100%;
     align-items: stretch;
     overflow: scroll;
     border-radius: 10px;
+    border-top: 2px solid black;
 }
 
 .list-container::-webkit-scrollbar {
@@ -183,13 +222,11 @@ html {
 
 
 .heading {
-    border: 2px solid purple;
-    height: 240px;
+    height: 170px;
     background-color: orangered;
 }
 
 .subreddit {
-    border: 2px dotted blue;
     display: grid;
     justify-items: center;
     align-items: center;
@@ -200,12 +237,11 @@ html {
 
 
 .subreddit div {
-    border: 1px solid black;
     min-width: 100%;
 }
 
 .subreddit figure {
-    border: 2px solid green;
+
     height: 300px;
     display: flex;
     justify-content: center;
@@ -243,7 +279,6 @@ html {
 }
 
 .sub-title h3 {
-    border: 1px solid red;
     min-width: 100%;
     text-align: center;
     font-size: 22px;
@@ -260,7 +295,8 @@ html {
     align-items: center;
     height: 100px;
     font-size: 22px;
-    
+    position: relative;
+    top: 100px;
 }
 
 
@@ -271,13 +307,13 @@ html {
 
 @media screen and (max-width: 850px) {
     body {
-        height: 1500px;
+        height: 1000px;
 
     }
 
     .realHome {
         position: relative;
-        bottom: 240px;
+        bottom: 120px;
     }
 
     .subreddit {
@@ -288,12 +324,12 @@ html {
 
 @media screen and (max-width: 643px) {
     body {
-        height: 1450px;
+        height: 990px;
     }
 
     .realHome {
         position: relative;
-        bottom: 270px;
+        bottom: 120px;
     }
 
     .subreddit {
@@ -312,6 +348,12 @@ html {
     .subreddit img {
         width: 230px;
         height: 200px;
+    }
+
+    .article-container p {
+
+        font-size: 14px;
+        
     }
 
 }
@@ -379,7 +421,14 @@ html {
         height: 1100px;
     }
 
-
+    .article-container p {
+        border: 2px solid yellow;
+        text-align: center;
+        width: 60%;
+        justify-self: center;
+        font-size: 9px;
+        
+    }
 
     .sub-title h3 {
         font-size: 16px;

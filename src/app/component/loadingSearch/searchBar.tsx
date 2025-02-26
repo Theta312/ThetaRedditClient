@@ -27,6 +27,7 @@ export default function SearchBar() {
             return
         } else {
             dispatch(loadSearch(search));
+            setSearch('');
         }
     }
 
