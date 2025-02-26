@@ -5,9 +5,7 @@ import { chooseArticle, articleSelected } from '../../../lib/features/article/ar
 
 
 
-interface Product {
-    [key: string]: any; 
-};
+
 
 
 
