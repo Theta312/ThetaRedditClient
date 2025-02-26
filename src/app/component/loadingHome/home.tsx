@@ -23,6 +23,7 @@ const Home:React.FC<MyComponentProps> = ({data}) => {
                    data.map((article:Article) => {
                     const id = article.data.id;
                     const name = article.data.title;
+                    
     
                     return (
                         <div key={id} className='subreddit' >

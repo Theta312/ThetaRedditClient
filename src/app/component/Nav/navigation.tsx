@@ -26,13 +26,13 @@ export default function Navigation() {
     return (
         <div className='navigation' >
             <div className='button home' >
-                <button type='button' onClick={handleHome} ><Link href='/' >Home</Link></button>
+                <button type='button' onClick={handleHome} ><Link href='/' className='boton' >Home</Link></button>
             </div>
             <div className='button IAM'>
-            <button type='button' onClick={handleAMI} ><Link href='/' >AMIA</Link></button>
+            <button type='button' onClick={handleAMI} ><Link href='/' className='boton' >AMIA</Link></button>
             </div>
             <div className='button interest'>
-                <button type='button' onClick={handleInterest} ><Link href='/' >IAF</Link></button>
+                <button type='button' onClick={handleInterest} ><Link href='/' className='boton' >IAF</Link></button>
             </div>
         </div>
     )

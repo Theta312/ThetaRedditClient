@@ -31,7 +31,7 @@ export default function Index() {
         )
     } else {
         return (
-            <div data-testid='loading' >
+            <div className='loading' data-testid='loading' >
                 <h1>...Loading</h1>
             </div>
         )
