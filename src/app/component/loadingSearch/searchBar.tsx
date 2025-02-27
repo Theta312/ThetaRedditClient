@@ -21,10 +21,12 @@ export default function SearchBar() {
         setSearch(e.target.value);
     };
 
-    const handleSubmit = () => {
-       
+    interface SubmitEvent extends React.FormEvent<HTMLFormElement> {}
+
+    const handleSubmit = (event: SubmitEvent) => {
+        event.preventDefault();
         if (search === '') {
-            return
+            return;
         } else {
             dispatch(loadSearch(search));
             setSearch('');
