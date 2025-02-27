@@ -1,6 +1,6 @@
 'use client';
-import { useAppDispatch, useAppSelector } from '../../../lib/hooks';
-import { chooseArticle, articleSelected } from '../../../lib/features/article/articleSlice'
+import { useAppDispatch} from '../../../lib/hooks';
+import { chooseArticle } from '../../../lib/features/article/articleSlice'
 
 
 
