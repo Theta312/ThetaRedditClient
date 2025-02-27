@@ -6,8 +6,24 @@ import loadAMIFunc from '../../../app/component/Nav/loadAMI';
 import { RootState } from '../../store';
 import { createAppSlice } from '../../createAppSlice'
 
+
+interface ArticleData {
+    [key: string]: string;
+}
+
+interface Article {
+    data: ArticleData;
+    kind: string;
+} 
+
+interface Value{
+    data: Article[];
+}
+
+
+
 interface HomeState {
-    value: any[],
+    value: Value[],
     isLoading: boolean,
     loadingFailed: boolean
 }

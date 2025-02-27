@@ -2,23 +2,32 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from '../../store';
 
 
-interface Value {
-    [key: string]: any
+
+interface Article {
+    data: ArticleData;
+    kind: string;
+} 
+
+interface ArticleData {
+    [key: string]: string;
 }
 
 interface ArticleState {
-    value: Value;
+    value: Article;
 }
 
 const initialState: ArticleState = {
-    value: {}
+    value: {
+        data: {},
+        kind: ''
+    }
 };
 
 const articleSlice = createSlice({
     name: 'article',
     initialState,
     reducers: {
-        chooseArticle: (state, action: PayloadAction<Value>) => {
+        chooseArticle: (state, action: PayloadAction<Article>) => {
             state.value = action.payload;
         }
     }
