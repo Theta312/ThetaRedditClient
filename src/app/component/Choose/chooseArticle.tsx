@@ -6,16 +6,22 @@ import { chooseArticle, articleSelected } from '../../../lib/features/article/ar
 
 
 
-
-
-
-type MyComponentProps = {
-    [key: string]: any;
+interface ArticleData {
+    [key: string]: string;
 }
 
-const ChooseArticle:React.FC<MyComponentProps> = ({article}) => {
-    const chosenState = useAppSelector(articleSelected);
+interface Article {
+    data: ArticleData;
+    kind: string;
+} 
+
+
+
+const ChooseArticle:React.FC<{ article: Article }> = ({article}) => {
+    //const chosenState = useAppSelector(articleSelected);
     const dispatch = useAppDispatch();
+
+    
     const handleClick = () => {
         dispatch(chooseArticle(article));
     };
@@ -23,7 +29,7 @@ const ChooseArticle:React.FC<MyComponentProps> = ({article}) => {
     const id = article.data.id;
     const name = article.data.title;
     const redditImg = article.data.thumbnail;
-    console.log(chosenState);
+   
 
     return (
         <div key={id} onClick={handleClick}>

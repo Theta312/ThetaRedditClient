@@ -3,17 +3,22 @@ import React from 'react';
 import ChooseArticle from "../Choose/chooseArticle";
 import Link from "next/link";
 
+interface ArticleData {
+    [key: string]: string;
+}
+
 interface Article {
-    [key: string]: any;
+    data: ArticleData;
+    kind: string;
 } 
 
-type MyComponentProps = {
-    [key: string]: any;
-};
+interface MyComponentProps {
+    data: Article[];
+}
 
 const Home:React.FC<MyComponentProps> = ({data}) => {
 
-
+    
 
     if (data) {
 

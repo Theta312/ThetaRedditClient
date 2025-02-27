@@ -2,8 +2,17 @@ import Resources from '../../../util/otherAPI/otherAPI';
 
 const { AMIFunc } = Resources;
 
+interface ArticleData {
+    [key: string]: string;
+}
+
+interface Article {
+    data: ArticleData;
+    kind: string;
+} 
+
 interface AmIObj {
-    [key : string]: any
+    [key : string]: Article[];
 };
 
 

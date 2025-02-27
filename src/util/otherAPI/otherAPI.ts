@@ -1,6 +1,28 @@
-type AMIFuncType = () => Promise<any>;
-type InterestFuncType = () => Promise<any>;
-type searchFuncType= (word: string) => Promise<any>;
+
+interface data {
+    [key:string]: string | object;
+}
+
+interface dataArr {
+    data: data;
+    kind: string;
+}
+
+type Children = dataArr[];
+
+interface Response {
+    data: {
+        children: Children;
+    };
+    kind: string;
+}
+        
+
+
+
+type AMIFuncType = () => Promise<Response>;
+type InterestFuncType = () => Promise<Response>;
+type searchFuncType= (word: string) => Promise<Response>;
 
 const AMIFunc: AMIFuncType = async() => {
     const amIUrl = 'https://www.reddit.com/r/AmItheAsshole.json';
@@ -10,6 +32,7 @@ const AMIFunc: AMIFuncType = async() => {
 
         if (response.ok) {
             const responseJson = await response.json();
+            console.log(responseJson);
             return responseJson;
         }
     } catch(e) {

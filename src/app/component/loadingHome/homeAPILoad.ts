@@ -1,8 +1,21 @@
 import getFunc from '../../../util/homeAPI/homeAPI';
 
 
+
+
+
+
+interface ArticleData {
+    [key: string]: string;
+}
+
+interface Article {
+    data: ArticleData;
+    kind: string;
+} 
+
 interface HomeObj {
-    [key : string]: any
+    data: Article[];
 };
 
 type homeAPIFunc = () => Promise<HomeObj>;

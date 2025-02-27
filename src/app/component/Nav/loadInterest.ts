@@ -4,8 +4,16 @@ const { InterestFunc } = Resources;
 
 
 interface InterestObj {
-    [key : string]: any
+    [key : string]: Article[];
 };
+interface ArticleData {
+    [key: string]: string;
+}
+
+interface Article {
+    data: ArticleData;
+    kind: string;
+} 
 
 type InterestFuncType = () => Promise<InterestObj>;
 

@@ -20,7 +20,7 @@ export default function Index() {
             dispatch(loadInfo());
         }
     }, [])
-
+   
     
 
     if (!loading) {
