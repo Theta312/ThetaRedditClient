@@ -32,7 +32,6 @@ const AMIFunc: AMIFuncType = async() => {
 
         if (response.ok) {
             const responseJson = await response.json();
-            console.log(responseJson);
             return responseJson;
         }
     } catch(e) {
