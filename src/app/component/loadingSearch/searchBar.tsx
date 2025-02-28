@@ -9,7 +9,6 @@ import { useState } from 'react';
 export default function SearchBar() {
 
     const [search, setSearch] = useState<string>('');
-    const [search, setSearch] = useState<string>('');
     const dispatch = useAppDispatch();
 
     interface searchProp {
