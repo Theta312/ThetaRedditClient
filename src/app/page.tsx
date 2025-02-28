@@ -24,7 +24,7 @@ export default function Index() {
             dispatch(loadInfo());
         }
     }, [homeValue, dispatch])
-   
+
     
 
     if (!loading) {

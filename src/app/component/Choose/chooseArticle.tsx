@@ -17,6 +17,8 @@ const ChooseArticle:React.FC<ChooseArticleProps> = ({article}) => {
     const dispatch = useAppDispatch();
 
     
+
+    
     const handleClick = () => {
         dispatch(chooseArticle(article));
     };
@@ -24,6 +26,7 @@ const ChooseArticle:React.FC<ChooseArticleProps> = ({article}) => {
     const id = article.data.id;
     const name = article.data.title;
     const redditImg = article.data.thumbnail;
+   
    
 
     return (

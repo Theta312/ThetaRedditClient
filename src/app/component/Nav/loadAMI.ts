@@ -4,6 +4,15 @@ import { RedditData } from '../../../util/otherAPI/otherAPI';
 
 const { AMIFunc } = Resources;
 
+interface ArticleData {
+    [key: string]: string;
+}
+
+interface Article {
+    data: ArticleData;
+    kind: string;
+} 
+
 type AmIFuncType = () => Promise<RedditData[]>;
 
 const loadAMIFunc: AmIFuncType = async() => {

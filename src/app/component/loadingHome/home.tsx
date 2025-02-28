@@ -14,6 +14,7 @@ interface HomeProps {
 const Home:React.FC<HomeProps> = ({redditPosts}) => {
 
     
+    
 
     if (redditPosts.length > 0) {
 
