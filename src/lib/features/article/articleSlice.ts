@@ -1,24 +1,23 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from '../../store';
+import { RedditData } from '../../../util/otherAPI/otherAPI';
 
 
-interface Value {
-    [key: string]: any
+
+
+interface articleState {
+    value: RedditData;
 }
 
-interface ArticleState {
-    value: Value;
+const initialState: articleState = {
+    value: {} as RedditData 
 }
-
-const initialState: ArticleState = {
-    value: {}
-};
 
 const articleSlice = createSlice({
     name: 'article',
     initialState,
     reducers: {
-        chooseArticle: (state, action: PayloadAction<Value>) => {
+        chooseArticle: (state, action: PayloadAction<RedditData>) => {
             state.value = action.payload;
         }
     }

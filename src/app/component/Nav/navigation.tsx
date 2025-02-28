@@ -8,18 +8,17 @@ export default function Navigation() {
 
     const dispatch = useAppDispatch();
 
-    const handleInterest = (e:any) => {
-        e.preventDefault();
+    const handleInterest = () => {
+        
         dispatch(loadInterest());
     }
 
-    const handleAMI = (e:any) => {
-        e.preventDefault();
+    const handleAMI = () => {
+      
         dispatch(loadIAM());
     }
 
-    const handleHome = (e:any) => {
-        e.preventDefault();
+    const handleHome = () => {
         dispatch(loadInfo());
     }
 

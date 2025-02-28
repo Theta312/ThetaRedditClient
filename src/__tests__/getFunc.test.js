@@ -1,41 +1,36 @@
-import getFunc from '../util/homeAPI/homeAPI';
+import getRedditPost from '../util/homeAPI/homeAPI';
 import homeAPILoad from '../app/component/loadingHome/homeAPILoad.ts';
 
 jest.mock('../util/homeAPI/homeAPI'); 
 
 it('should return a promise', async() => {
-    const expectedValue = [{
-        data: {},
-        kind: ''
-    }, {
-        data: {},
-        kind: ''
-    }, {
-        data: {},
-        kind: ''
-    }];
-
-    const mockValue = {
+    const expectedValue = {
         status: 'mock',
-        data: {
-            children: [
-                {
-                    data: {},
-                    kind: ''
-                },
-                {
-                    data: {},
-                    kind: ''
-                },
-                {
-                    data: {},
-                    kind: ''
-                }
-            ]
-        }
+        children: [{
+            data: {}
+            },
+            {
+            data: {}
+            },
+            {
+            data: {}
+        }]
+    };
+
+    const mockedValue = {
+        status: 'mock',
+        children: [{
+            data: {}
+            },
+            {
+            data: {}
+            },
+            {
+            data: {}
+        }]
     };
     
-    getFunc.mockResolvedValueOnce(mockValue);
+    getRedditPost.mockResolvedValueOnce(mockedValue);
     //act
     const actualValue = await homeAPILoad();
     //assert

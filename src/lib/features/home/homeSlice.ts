@@ -5,9 +5,13 @@ import loadInterestFunc from '../../../app/component/Nav/loadInterest';
 import loadAMIFunc from '../../../app/component/Nav/loadAMI';
 import { RootState } from '../../store';
 import { createAppSlice } from '../../createAppSlice'
+import { RedditData } from '../../../util/otherAPI/otherAPI';
+
+
+
 
 interface HomeState {
-    value: any[],
+    value: RedditData[],
     isLoading: boolean,
     loadingFailed: boolean
 }
@@ -32,7 +36,7 @@ const homeSlice = createAppSlice({
                     state.isLoading = true;
                     state.loadingFailed = false;
                 },
-                fulfilled: (state, action: PayloadAction<any>) => {
+                fulfilled: (state, action: PayloadAction<RedditData[]>) => {
                     state.isLoading = false;
                     state.loadingFailed = false;
                     state.value = action.payload;
@@ -53,7 +57,7 @@ const homeSlice = createAppSlice({
                     state.isLoading = true;
                     state.loadingFailed = false;
                 },
-                fulfilled: (state, action: PayloadAction<any>) => {
+                fulfilled: (state, action: PayloadAction<RedditData[]>) => {
                     state.isLoading = false;
                     state.loadingFailed = false;
                     state.value = action.payload;
@@ -74,7 +78,7 @@ const homeSlice = createAppSlice({
                     state.isLoading = true;
                     state.loadingFailed = false;
                 },
-                fulfilled: (state, action: PayloadAction<any>) => {
+                fulfilled: (state, action: PayloadAction<RedditData[]>) => {
                     state.isLoading = false;
                     state.loadingFailed = false;
                     state.value = action.payload;
@@ -95,7 +99,7 @@ const homeSlice = createAppSlice({
                     state.isLoading = true;
                     state.loadingFailed = false;
                 },
-                fulfilled: (state, action: PayloadAction<any>) => {
+                fulfilled: (state, action: PayloadAction<RedditData[]>) => {
                     state.isLoading = false;
                     state.loadingFailed = false;
                     state.value = action.payload;

@@ -1,17 +1,18 @@
-import getFunc from '../../../util/homeAPI/homeAPI';
+import getRedditPost from '../../../util/homeAPI/homeAPI';
+import { RedditData } from '../../../util/otherAPI/otherAPI'
 
 
-interface HomeObj {
-    [key : string]: any
-};
 
-type homeAPIFunc = () => Promise<HomeObj>;
+
+
+
+
+type homeAPIFunc = () => Promise<RedditData[]>;
 
 
 const homeAPILoad: homeAPIFunc = async() => {
-    const response = await getFunc();
-    const data = response.data.children;
-    return data
+    const response = await getRedditPost();
+    return response;
 };
 
 

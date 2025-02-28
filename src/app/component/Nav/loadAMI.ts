@@ -1,19 +1,14 @@
 import Resources from '../../../util/otherAPI/otherAPI';
+import { RedditData } from '../../../util/otherAPI/otherAPI';
+
 
 const { AMIFunc } = Resources;
 
-interface AmIObj {
-    [key : string]: any
-};
-
-
-
-type AmIFuncType = () => Promise<AmIObj>;
+type AmIFuncType = () => Promise<RedditData[]>;
 
 const loadAMIFunc: AmIFuncType = async() => {
     const response = await AMIFunc();
-    const data = response.data.children;
-    return data
+    return response;
 };
 
 

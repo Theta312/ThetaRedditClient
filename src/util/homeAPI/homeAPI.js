@@ -1,13 +1,13 @@
 
 
-const getFunc = async() => {
+const getRedditPosts = async() => {
     const urlToFetch = 'https://www.reddit.com/.json?feed=home';
 
     try {
         const response = await fetch(urlToFetch);
         if (response.ok) {
             const jsonResponse = await response.json();
-            return jsonResponse
+            return jsonResponse.data.children;
         }
 
     } catch(error) {
@@ -16,4 +16,4 @@ const getFunc = async() => {
 };
 
 
-export default getFunc;
+export default getRedditPosts;

@@ -1,6 +1,20 @@
-type AMIFuncType = () => Promise<any>;
-type InterestFuncType = () => Promise<any>;
-type searchFuncType= (word: string) => Promise<any>;
+
+
+export interface RedditData {
+    data: {
+        id: string;
+        title: string;
+        selftext: string;
+        ups: number;
+        author: string;
+        thumbnail: string;
+    }
+}
+
+
+type AMIFuncType = () => Promise<RedditData[]>;
+type InterestFuncType = () => Promise<RedditData[]>;
+type searchFuncType= (word: string) => Promise<RedditData[]>;
 
 const AMIFunc: AMIFuncType = async() => {
     const amIUrl = 'https://www.reddit.com/r/AmItheAsshole.json';
@@ -10,7 +24,7 @@ const AMIFunc: AMIFuncType = async() => {
 
         if (response.ok) {
             const responseJson = await response.json();
-            return responseJson;
+            return responseJson.data.children;
         }
     } catch(e) {
         console.log(e)
@@ -24,7 +38,7 @@ const InterestFunc: InterestFuncType = async() => {
       const response = await fetch(urlToInterest);
       if (response.ok) {
         const jsonResponse = await response.json();
-        return jsonResponse;
+        return jsonResponse.data.children;;
       }
     } catch(e) {
       console.log(e)
@@ -39,7 +53,7 @@ const searchFunc: searchFuncType = async(word: string) => {
         const response = await fetch(searchUrl);
         if (response.ok) {
             const jsonResponse = await response.json();
-            return jsonResponse;
+            return jsonResponse.data.children;
         }
     } catch(error) {
         console.error(error);

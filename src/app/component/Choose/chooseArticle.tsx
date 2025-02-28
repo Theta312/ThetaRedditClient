@@ -1,21 +1,22 @@
 'use client';
-import { useAppDispatch, useAppSelector } from '../../../lib/hooks';
-import { chooseArticle, articleSelected } from '../../../lib/features/article/articleSlice'
+import { useAppDispatch} from '../../../lib/hooks';
+import { chooseArticle } from '../../../lib/features/article/articleSlice'
+import { RedditData } from '../../../util/otherAPI/otherAPI'
 
 
 
-
-
-
-
-
-type MyComponentProps = {
-    [key: string]: any;
+interface ChooseArticleProps {
+    article: RedditData;
 }
 
-const ChooseArticle:React.FC<MyComponentProps> = ({article}) => {
-    const chosenState = useAppSelector(articleSelected);
+
+
+
+const ChooseArticle:React.FC<ChooseArticleProps> = ({article}) => {
+    //const chosenState = useAppSelector(articleSelected);
     const dispatch = useAppDispatch();
+
+    
     const handleClick = () => {
         dispatch(chooseArticle(article));
     };
@@ -23,7 +24,7 @@ const ChooseArticle:React.FC<MyComponentProps> = ({article}) => {
     const id = article.data.id;
     const name = article.data.title;
     const redditImg = article.data.thumbnail;
-    console.log(chosenState);
+   
 
     return (
         <div key={id} onClick={handleClick}>

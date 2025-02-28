@@ -2,25 +2,25 @@
 import React from 'react';
 import ChooseArticle from "../Choose/chooseArticle";
 import Link from "next/link";
+import { RedditData } from '../../../util/otherAPI/otherAPI'
 
-interface Article {
-    [key: string]: any;
-} 
 
-type MyComponentProps = {
-    [key: string]: any;
-};
-
-const Home:React.FC<MyComponentProps> = ({data}) => {
+interface HomeProps {
+    redditPosts: RedditData[];
+}
 
 
 
-    if (data) {
+const Home:React.FC<HomeProps> = ({redditPosts}) => {
+
+    
+
+    if (redditPosts.length > 0) {
 
         return (
             <div className='list-container'>
                 {
-                   data.map((article:Article) => {
+                   redditPosts.map((article: RedditData) => {
                     const id = article.data.id;
                     const name = article.data.title;
                     

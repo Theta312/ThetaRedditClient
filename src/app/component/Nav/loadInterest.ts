@@ -1,18 +1,14 @@
 import Resources from '../../../util/otherAPI/otherAPI';
+import { RedditData } from '../../../util/otherAPI/otherAPI';
 
 const { InterestFunc } = Resources;
 
 
-interface InterestObj {
-    [key : string]: any
-};
-
-type InterestFuncType = () => Promise<InterestObj>;
+type InterestFuncType = () => Promise<RedditData[]>;
 
 const loadInterestFunc: InterestFuncType = async() => {
     const response = await InterestFunc();
-    const data = response.data.children;
-    return data;
+    return response;
 };
 
 export default loadInterestFunc;

@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 export default function SearchBar() {
 
-    const [search, setSearch] = useState<any>('');
+    const [search, setSearch] = useState<string>('');
     const dispatch = useAppDispatch();
 
     interface searchProp {
@@ -21,10 +21,12 @@ export default function SearchBar() {
         setSearch(e.target.value);
     };
 
-    const handleSubmit = (e: any) => {
-        e.preventDefault();
+    
+
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
         if (search === '') {
-            return
+            return;
         } else {
             dispatch(loadSearch(search));
             setSearch('');

@@ -1,10 +1,10 @@
 
-const getFunc = jest.fn(() => {
+const getRedditPosts = jest.fn(() => {
     return Promise.resolve({
         status: '',
-        data: {},
+        children: [],
     })
 })
 
-export default getFunc;
+export default getRedditPosts;
 

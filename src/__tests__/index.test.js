@@ -2,7 +2,7 @@ import { screen } from "@testing-library/react";
 import '@testing-library/jest-dom';
 import Index from '../app/page.tsx';
 import { renderWithProviders } from '../app/utils/test-utils.tsx';
-import getFunc from "../util/homeAPI/homeAPI";
+import getRedditPost from "../util/homeAPI/homeAPI";
 
 
 
@@ -13,36 +13,38 @@ jest.mock('../util/homeAPI/homeAPI');
 
 
 it('component should render a list of items after API returns obj', async() => {
-    const mockedValue = {
-        status: 'mock',
-        data: {
-            children: [
-                {
-                    data: {
-                            title: 'hello there',
-                            id: 1
-                    },
-                    kind: ''
-                },
-                {
-                    data: {
-                            title: 'hello sir',
-                            id: 2
-                    },
-                    kind: ''
-                },
-                {
-                    data: {
-                            title: 'hello maam',
-                            id: 3
-                    },
-                    kind: ''
-                }
-            ]
-        }
-    };
+    const mockedValue = [{
+            data: { 
+                id: 'rega',
+                title: 'sdfvaswdf',
+                selftext: 'dgvadgfa',
+                ups: 2,
+                author: 'dfgawerdg',
+                thumbnail: 'dgadg', 
+            }
+            },
+            {
+            data: {
+                id: 'rega',
+                title: 'sdfvaswdf',
+                selftext: 'dgvadgfa',
+                ups: 2,
+                author: 'dfgawerdg',
+                thumbnail: 'dgadg', 
+            }
+            },
+            {
+            data: {
+                id: 'rega',
+                title: 'sdfvaswdf',
+                selftext: 'dgvadgfa',
+                ups: 2,
+                author: 'dfgawerdg',
+                thumbnail: 'dgadg', 
+            }
+        }];
 
-    getFunc.mockResolvedValueOnce(mockedValue);
+    getRedditPost.mockResolvedValueOnce(mockedValue);
     renderWithProviders(<Index />)
     const home = await screen.findByTestId('home');
     expect(home).toBeInTheDocument();

@@ -1,17 +1,16 @@
 import Resources from '../../../util/otherAPI/otherAPI';
+import { RedditData } from '../../../util/otherAPI/otherAPI';
+
 
 const { searchFunc } = Resources;
 
-interface SearchObj {
-    [key : string]: any
-}
 
-type searchAPIFuncType = (word: string) => Promise<SearchObj>;
+
+type searchAPIFuncType = (word: string) => Promise<RedditData[]>;
 
 const searchAPIFunc: searchAPIFuncType = async(word: string) => {
-    const response = await searchFunc(word);
-    const data = response.data.children;
-    return data;
+    const response = await searchFunc(word);;
+    return response;
 };
 
 
