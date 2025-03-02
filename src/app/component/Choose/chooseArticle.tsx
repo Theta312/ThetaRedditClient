@@ -27,14 +27,13 @@ const ChooseArticle:React.FC<ChooseArticleProps> = ({article}) => {
     const name = article.data.title;
     const redditImg = article.data.thumbnail;
    
-   
 
     return (
         <div key={id} onClick={handleClick}>
             <h3>{name}</h3>
             <div>{redditImg &&
                 <figure>
-                    <img src={redditImg} alt='reddit image' />
+                    <img src={redditImg} alt='reddit thumbnail'  />
                 </figure>}
             </div>
             <div></div>
