@@ -1,5 +1,5 @@
 import getRedditPost from '../util/homeAPI/homeAPI';
-import homeAPILoad from '../app/component/loadingHome/homeAPILoad.ts';
+import homeAPILoad from '../component/loadingHome/homeAPILoad.ts';
 
 jest.mock('../util/homeAPI/homeAPI'); 
 

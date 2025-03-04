@@ -1,6 +1,6 @@
 import { screen } from "@testing-library/react";
 import '@testing-library/jest-dom';
-import SearchBar from '../app/component/loadingSearch/searchBar.tsx';
+import SearchBar from '../component/loadingSearch/SearchBar.tsx';
 import userEvent from '@testing-library/user-event';
 import { renderWithProviders } from '../app/utils/test-utils.tsx';
 

@@ -1,8 +1,8 @@
 import { PayloadAction } from "@reduxjs/toolkit";
-import homeAPILoad from '../../../app/component/loadingHome/homeAPILoad';
-import searchAPIFunc from '../../../app/component/loadingSearch/loadSearch'
-import loadInterestFunc from '../../../app/component/Nav/loadInterest';
-import loadAMIFunc from '../../../app/component/Nav/loadAMI';
+import homeAPILoad from '../../../component/loadingHome/homeAPILoad';
+import searchAPIFunc from '../../../component/loadingSearch/loadSearch'
+import loadInterestFunc from '../../../component/Nav/loadInterest';
+import loadAMIFunc from '../../../component/Nav/loadAMI';
 import { RootState } from '../../store';
 import { createAppSlice } from '../../createAppSlice'
 import { RedditData } from '../../../util/otherAPI/otherAPI';

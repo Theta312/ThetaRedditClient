@@ -1,7 +1,7 @@
 'use client';
-import { useAppDispatch} from '../../../lib/hooks';
-import { chooseArticle } from '../../../lib/features/article/articleSlice'
-import { RedditData } from '../../../util/otherAPI/otherAPI'
+import { useAppDispatch} from '../../lib/hooks';
+import { chooseArticle } from '../../lib/features/article/articleSlice'
+import { RedditData } from '../../util/otherAPI/otherAPI'
 
 
 
@@ -26,7 +26,7 @@ const ChooseArticle:React.FC<ChooseArticleProps> = ({article}) => {
     const id = article.data.id;
     const name = article.data.title;
     const redditImg = article.data.thumbnail;
-   
+    const redditLikes = article.data.ups
 
     return (
         <div key={id} onClick={handleClick}>
@@ -36,7 +36,7 @@ const ChooseArticle:React.FC<ChooseArticleProps> = ({article}) => {
                     <img src={redditImg} alt='reddit thumbnail'  />
                 </figure>}
             </div>
-            <div></div>
+            <div className='redditLikes' >Likes: {redditLikes}</div>
         </div>
     )
 };

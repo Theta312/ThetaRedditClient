@@ -1,6 +1,6 @@
 import { StoreProvider } from "./StoreProvider"
-import SearchBar from "./component/loadingSearch/searchBar"
-import Navigation from "./component/Nav/navigation"
+import SearchBar from "../component/loadingSearch/searchBar"
+import Navigation from "../component/Nav/navigation"
 import './global.css'
 
 

@@ -1,5 +1,5 @@
-import Resources from '../../../util/otherAPI/otherAPI';
-import { RedditData } from '../../../util/otherAPI/otherAPI';
+import Resources from '../../util/otherAPI/otherAPI';
+import { RedditData } from '../../util/otherAPI/otherAPI';
 
 const { InterestFunc } = Resources;
 

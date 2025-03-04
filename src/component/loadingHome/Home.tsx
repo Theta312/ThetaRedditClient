@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
-import ChooseArticle from "../Choose/chooseArticle";
+import ChooseArticle from '../Choose/ChooseArticle';
 import Link from "next/link";
-import { RedditData } from '../../../util/otherAPI/otherAPI'
+import { RedditData } from '../../util/otherAPI/otherAPI'
 
 
 interface HomeProps {

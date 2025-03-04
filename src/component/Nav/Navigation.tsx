@@ -1,6 +1,6 @@
 'use client';
-import { useAppDispatch } from "../../../lib/hooks";
-import { loadInfo, loadInterest, loadIAM } from '../../../lib/features/home/homeSlice'
+import { useAppDispatch } from "../../lib/hooks";
+import { loadInfo, loadInterest, loadIAM } from '../../lib/features/home/homeSlice'
 import Link from 'next/link';
 
 

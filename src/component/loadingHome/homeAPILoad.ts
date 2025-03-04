@@ -1,5 +1,5 @@
-import getRedditPost from '../../../util/homeAPI/homeAPI';
-import { RedditData } from '../../../util/otherAPI/otherAPI'
+import getRedditPost from '../../util/homeAPI/homeAPI';
+import { RedditData } from '../../util/otherAPI/otherAPI'
 
 
 

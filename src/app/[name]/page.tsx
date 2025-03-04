@@ -17,9 +17,12 @@ export default function Article() {
   
     let name: string;
     let texted;
+    let author;
+
     if (article.data) {
         name = article.data.title;
         texted = article.data.selftext;
+        author = article.data.author;
     } else {
         name = 'Article Not Found'
     }
@@ -28,7 +31,7 @@ export default function Article() {
         <div className='article-container'>
             <button type='button' onClick={handleGoBack}>Go Back</button>
             <h1>Article:</h1>
-            <h2>{name} </h2> 
+            <h2>{name} - by {author} </h2> 
             <p>{texted}</p>
         </div>
     )

@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { useAppDispatch } from "../../../lib/hooks";
-import { loadSearch }  from '../../../lib/features/home/homeSlice'
+import { useAppDispatch } from "../../lib/hooks";
+import { loadSearch }  from '../../lib/features/home/homeSlice'
 import { useState } from 'react';
 
 

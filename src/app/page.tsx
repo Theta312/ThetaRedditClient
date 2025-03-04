@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../lib/hooks";
 import { loadInfo } from '../lib/features/home/homeSlice'
 import { homeState, homeLoading } from "../lib/features/home/homeSlice";
-import Home from "./component/loadingHome/home";
+import Home from "../component/loadingHome/Home";
 import { RedditData } from '../util/otherAPI/otherAPI'
 
 

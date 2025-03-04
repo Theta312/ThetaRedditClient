@@ -49,6 +49,13 @@ body {
     color: black;
 }
 
+.redditLikes {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
 .boton {
     text-decoration: none;
     color: black;
@@ -333,6 +340,10 @@ body {
         bottom: 120px;
     }
 
+    .redditLikes {
+        display: none;
+    }
+
     .subreddit {
         height: 300px;
     }
@@ -423,7 +434,6 @@ body {
     }
 
     .article-container p {
-        border: 2px solid yellow;
         text-align: center;
         width: 60%;
         justify-self: center;
